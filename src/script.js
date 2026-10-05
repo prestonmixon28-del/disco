@@ -32,3 +32,26 @@ document.getElementById("downButton").onclick = function() {
     y += 10;
     moveDancer();
 };
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft") {
+        x -= 10;
+        moveDancer();
+    } else if (event.key === "ArrowRight") {
+        x += 10;
+        moveDancer();
+    } else if (event.key === "ArrowUp") {
+        y -= 10;
+        moveDancer();
+    } else if (event.key === "ArrowDown") {
+        y += 10;
+        moveDancer();
+    }
+});
+
+
+document.getElementById("resetButton").onclick = function() {
+    x = 0;
+    y = 0;
+    moveDancer();
+};
