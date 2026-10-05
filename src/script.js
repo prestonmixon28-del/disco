@@ -7,3 +7,28 @@ function chnagedColor() {
 }
 
 setInterval(chnagedColor, 1000);
+
+let x = 0;
+let y = 0;
+
+function moveDancer() {
+    document.getElementById("danceFloor").style.transform = `translate(${x}px, ${y}px)`;
+
+}
+
+document.getElementById("leftButton").onclick = function() {
+    x -= 10;
+    moveDancer();
+};
+document.getElementById("rightButton").onclick = function() {
+    x += 10;
+    moveDancer();
+};
+document.getElementById("upButton").onclick = function() {
+    y -= 10;
+    moveDancer();
+};
+document.getElementById("downButton").onclick = function() {
+    y += 10;
+    moveDancer();
+};
